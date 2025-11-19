@@ -2,7 +2,7 @@
 
 > **Autonomous Cyber Defense for Critical Infrastructure**
 
-![SafeGrid Banner](https://ibb.co/7xbY6YBQ)
+![SafeGrid Banner](./safegrid.png)
 
 SafeGrid is a next-generation cybersecurity platform designed to protect legacy industrial systems (OT/ICS) using real-time AI, anomaly detection, and autonomous response mechanisms. It bridges the gap between 1970s controllers and modern threat landscapes.
 
