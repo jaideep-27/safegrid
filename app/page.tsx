@@ -9,18 +9,17 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center min-h-[90vh] overflow-hidden bg-background text-center px-4">
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-background to-background opacity-50" />
+      <section className="relative flex flex-col items-center justify-center min-h-[90vh] overflow-hidden text-center px-4">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="z-10 max-w-4xl space-y-6"
+          className="z-10 max-w-4xl space-y-6 relative"
         >
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
             Autonomous Cyber Defense for <br />
-            <span className="text-primary neon-text">Critical Infrastructure.</span>
+            <span className="text-primary neon-text glitch-effect">Critical Infrastructure.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
@@ -43,7 +42,7 @@ export default function Home() {
       </section>
 
       {/* Key Threats Section */}
-      <section className="py-24 bg-secondary/20">
+      <section className="py-24 border-y border-primary/10">
         <div className="container px-4 md:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div 
@@ -51,11 +50,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm"
+              className="p-6 rounded-xl border border-primary/20 bg-black/60 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,65,0.1)] group"
             >
-              <ShieldAlert className="h-12 w-12 text-destructive mb-4" />
-              <h3 className="text-xl font-bold mb-2">Legacy Vulnerabilities</h3>
-              <p className="text-muted-foreground">
+              <ShieldAlert className="h-12 w-12 text-destructive mb-4 group-hover:drop-shadow-[0_0_8px_rgba(239,68,68,0.5)] transition-all" />
+              <h3 className="text-xl font-bold mb-2 text-white">Legacy Vulnerabilities</h3>
+              <p className="text-muted-foreground group-hover:text-gray-300 transition-colors">
                 Outdated controllers (PLCs/SCADA) lack built-in security, making them easy targets for modern cyber attacks.
               </p>
             </motion.div>
@@ -65,11 +64,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm"
+              className="p-6 rounded-xl border border-primary/20 bg-black/60 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,65,0.1)] group"
             >
-              <Activity className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-2">Zero-Day Exploits</h3>
-              <p className="text-muted-foreground">
+              <Activity className="h-12 w-12 text-primary mb-4 group-hover:drop-shadow-[0_0_8px_rgba(0,255,65,0.5)] transition-all" />
+              <h3 className="text-xl font-bold mb-2 text-white">Zero-Day Exploits</h3>
+              <p className="text-muted-foreground group-hover:text-gray-300 transition-colors">
                 Traditional firewalls cannot detect novel attack vectors or sophisticated state-sponsored malware.
               </p>
             </motion.div>
@@ -79,11 +78,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm"
+              className="p-6 rounded-xl border border-primary/20 bg-black/60 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,65,0.1)] group"
             >
-              <Cpu className="h-12 w-12 text-blue-500 mb-4" />
-              <h3 className="text-xl font-bold mb-2">Operational Downtime</h3>
-              <p className="text-muted-foreground">
+              <Cpu className="h-12 w-12 text-blue-500 mb-4 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] transition-all" />
+              <h3 className="text-xl font-bold mb-2 text-white">Operational Downtime</h3>
+              <p className="text-muted-foreground group-hover:text-gray-300 transition-colors">
                 Cyber attacks on infrastructure cause physical damage, power outages, and massive economic loss.
               </p>
             </motion.div>
@@ -114,12 +113,12 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="relative z-10 flex flex-col items-center text-center bg-background p-6 border border-border rounded-xl"
+                className="relative z-10 flex flex-col items-center text-center bg-black/80 p-6 border border-primary/20 rounded-xl hover:border-primary/60 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,65,0.15)]"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold mb-4 border border-primary/50">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold mb-4 border border-primary/50 shadow-[0_0_10px_rgba(0,255,65,0.2)]">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
                 <p className="text-muted-foreground">{item.desc}</p>
               </motion.div>
             ))}

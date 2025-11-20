@@ -14,6 +14,7 @@ const navItems = [
   { name: "Solution", href: "/solution" },
   { name: "Implementation", href: "/implementation" },
   { name: "Impact", href: "/impact" },
+  { name: "Dashboard", href: "/dashboard" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -22,11 +23,11 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b border-primary/20 bg-black/95 backdrop-blur-md supports-[backdrop-filter]:bg-black/80">
       <div className="container flex h-16 items-center justify-between px-4 md:px-8">
-        <Link href="/" className="flex items-center space-x-2">
-          <ShieldCheck className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold tracking-tight">SafeGrid</span>
+        <Link href="/" className="flex items-center space-x-2 group">
+          <ShieldCheck className="h-8 w-8 text-primary transition-all group-hover:drop-shadow-[0_0_10px_rgba(0,255,65,0.8)]" />
+          <span className="text-xl font-bold tracking-tight group-hover:text-primary transition-colors">SafeGrid</span>
         </Link>
 
         {/* Desktop Nav */}
